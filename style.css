@@ -626,6 +626,14 @@ section > h2 {
 
 /* CASE STUDY SECTIONS */
 
+.case-study {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 60px 40px 150px;
+}
+
 .case-section {
     padding: 90px 0;
 
