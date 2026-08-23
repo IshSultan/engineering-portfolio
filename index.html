@@ -14,14 +14,29 @@
 
     <nav class="navbar">
 
-    <a href="#home" class="logo">IS</a>
+        <a href="#home" class="logo">
+            IS
+        </a>
 
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+
+        </div>
 
     </nav>
 
@@ -68,31 +83,207 @@
 
         </section>
 
-        <section id="about">
+        <section id="about" class="about-section">
 
-            <h2>About Me</h2>
-
-            <p>
-                Engineering Physics graduate focused on electrical engineering,
-                RF systems, electronics, embedded systems, and hardware testing.
+            <p class="section-label">
+                ABOUT
             </p>
+
+            <h2>
+                Engineering through
+                design, simulation, and testing.
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="about-main">
+
+                    <p>
+                        I am an Engineering Physics graduate focused on
+                        electrical engineering, RF systems, electronics,
+                        embedded systems, and hardware testing.
+                    </p>
+
+                    <p>
+                        I enjoy working on problems that connect theory
+                        with real hardware — from electromagnetic
+                        simulation and circuit design to laboratory
+                        testing and data analysis.
+                    </p>
+
+                </div>
+
+                <div class="about-details">
+
+                    <div>
+                        <span>Focus</span>
+                        <p>RF & Electronics</p>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <p>Ottawa, Canada</p>
+                    </div>
+
+                    <div>
+                        <span>Education</span>
+                        <p>Engineering Physics</p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
-        <section id="experience">
+        <section id="experience" class="experience-section">
 
-            <h2>Experience</h2>
+            <p class="section-label">
+                EXPERIENCE
+            </p>
 
-            <div class="experience-card">
+            <h2>
+                Engineering Experience
+            </h2>
 
-                <h3>R&D Electrical Engineer</h3>
+            <article class="experience-entry">
 
-                <h4>Gastops</h4>
+                <div class="experience-date">
+                    May 2024 — Aug 2025
+                </div>
 
-                <p>
-                    Developed, assembled, simulated, and tested electromagnetic
-                    sensor systems for aerospace applications.
-                </p>
+                <div class="experience-info">
+
+                    <h3>
+                        R&D Electrical Engineer
+                    </h3>
+
+                    <p class="experience-company">
+                        Gastops
+                    </p>
+
+                    <p class="experience-description">
+                        Supported the development of electromagnetic
+                        sensor systems for aerospace applications through
+                        prototype assembly, environmental testing,
+                        simulation, and data analysis.
+                    </p>
+
+                    <div class="experience-tags">
+
+                        <span>Electromagnetics</span>
+                        <span>Python</span>
+                        <span>Testing</span>
+                        <span>DAQ</span>
+                        <span>Electronics</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section id="skills" class="skills-section">
+
+            <p class="section-label">
+                TECHNICAL TOOLKIT
+            </p>
+
+            <h2>
+                Skills & Tools
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-group">
+
+                    <h3>
+                        RF & Electromagnetics
+                    </h3>
+
+                    <p>
+                        HFSS, microstrip transmission lines,
+                        antennas, impedance matching,
+                        S-parameters
+                    </p>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Electronics
+                    </h3>
+
+                    <p>
+                        PCB design, analog circuits,
+                        microcontrollers, sensors,
+                        soldering and prototyping
+                    </p>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Python, C, C++, MATLAB,
+                        data analysis and automation
+                    </p>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Engineering Tools
+                    </h3>
+
+                    <p>
+                        KiCad, Vivado, FEMM,
+                        SolidWorks, Jupyter,
+                        Git and Linux
+                    </p>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Laboratory
+                    </h3>
+
+                    <p>
+                        Oscilloscopes, spectrum analyzers,
+                        function generators, DAQ systems,
+                        environmental testing
+                    </p>
+
+                </div>
+
+
+                <div class="skill-group">
+
+                    <h3>
+                        Embedded Systems
+                    </h3>
+
+                    <p>
+                        Raspberry Pi, FPGA,
+                        serial communications,
+                        digital interfaces
+                    </p>
+
+                </div>
 
             </div>
 
@@ -112,7 +303,7 @@
 
                     <div class="project-image">
                         <img
-                            src="images/antenna/patch_antenna.png"
+                            src="images/antenna/patch-antenna.png"
                             alt="2.4 GHz microstrip patch antenna simulation">
                     </div>
 
@@ -227,18 +418,37 @@
 
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
 
-            <h2>Contact</h2>
-
-            <p>
-                Interested in discussing electrical engineering,
-                RF, hardware or embedded systems?
+            <p class="section-label">
+                CONTACT
             </p>
 
-            <a href="mailto:YOUR_EMAIL">
-                Email Me
-            </a>
+            <h2>
+                Let's build something.
+            </h2>
+
+            <p class="contact-text">
+                I'm interested in opportunities involving RF,
+                electronics, embedded systems, hardware development,
+                and engineering test.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:YOUR_EMAIL">
+                    Email →
+                </a>
+
+                <a href="YOUR_LINKEDIN_URL">
+                    LinkedIn →
+                </a>
+
+                <a href="YOUR_GITHUB_URL">
+                    GitHub →
+                </a>
+
+            </div>
 
         </section>
 
