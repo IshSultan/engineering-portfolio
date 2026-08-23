@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        2.4 GHz Patch Antenna | Ismael Suleiman
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+            IS
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#experience">
+                Experience
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <main class="case-study">
+
+
+        <!-- PROJECT HEADER -->
+
+        <header class="project-header">
+
+            <a
+                href="../index.html#projects"
+                class="back-link"
+            >
+                ← Back to Projects
+            </a>
+
+
+            <p class="project-category">
+                RF / ANTENNA DESIGN
+            </p>
+
+
+            <h1>
+                2.4 GHz Microstrip
+                Patch Antenna
+            </h1>
+
+
+            <p class="project-intro">
+
+                Designed and simulated a 2.4 GHz
+                microstrip patch antenna using
+                analytical calculations and Ansys HFSS,
+                then transferred the design into KiCad
+                for PCB fabrication.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>HFSS</span>
+
+                <span>KiCad</span>
+
+                <span>RF</span>
+
+                <span>Antennas</span>
+
+                <span>PCB Design</span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- OVERVIEW -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                01 — OVERVIEW
+            </p>
+
+            <h2>
+                Project Overview
+            </h2>
+
+            <p>
+                The objective of this project was to design a
+                microstrip patch antenna operating in the
+                2.4 GHz ISM band.
+            </p>
+
+            <p>
+                I began by calculating the approximate patch
+                dimensions from microstrip antenna theory.
+                These dimensions were then used to construct
+                an electromagnetic model in Ansys HFSS.
+            </p>
+
+            <p>
+                I evaluated the antenna using return loss,
+                VSWR, input impedance, and radiation-pattern
+                simulations. The final geometry was then
+                transferred into KiCad for PCB layout.
+            </p>
+
+        </section>
+
+
+
+        <!-- REQUIREMENTS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                02 — REQUIREMENTS
+            </p>
+
+            <h2>
+                Design Requirements
+            </h2>
+
+
+            <div class="spec-grid">
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        Frequency Band
+                    </p>
+
+                    <p class="spec-value">
+                        2.4 GHz ISM
+                    </p>
+                </div>
+
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        Target Impedance
+                    </p>
+
+                    <p class="spec-value">
+                        50 Ω
+                    </p>
+                </div>
+
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        Substrate
+                    </p>
+
+                    <p class="spec-value">
+                        FR4
+                    </p>
+                </div>
+
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        EM Simulator
+                    </p>
+
+                    <p class="spec-value">
+                        Ansys HFSS
+                    </p>
+                </div>
+
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        PCB Design
+                    </p>
+
+                    <p class="spec-value">
+                        KiCad
+                    </p>
+                </div>
+
+
+                <div class="spec-item">
+                    <p class="spec-label">
+                        Antenna Type
+                    </p>
+
+                    <p class="spec-value">
+                        Microstrip Patch
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DESIGN -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                03 — ANALYTICAL DESIGN
+            </p>
+
+            <h2>
+                Calculating the Initial Patch Dimensions
+            </h2>
+
+
+            <p>
+                A rectangular microstrip patch antenna
+                approximately resonates when its effective
+                electrical length is one-half wavelength.
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Patch Width
+                </p>
+
+                <p class="equation">
+                    W = c / (2f₀) √(2 / (εᵣ + 1))
+                </p>
+
+            </div>
+
+
+            <p>
+                Where:
+            </p>
+
+
+            <ul class="engineering-list">
+
+                <li>
+                    <strong>W</strong> = patch width
+                </li>
+
+                <li>
+                    <strong>c</strong> = speed of light
+                </li>
+
+                <li>
+                    <strong>f₀</strong> = desired resonant frequency
+                </li>
+
+                <li>
+                    <strong>εᵣ</strong> = substrate relative permittivity
+                </li>
+
+            </ul>
+
+            <h3 class="case-subheading">
+                Effective Dielectric Constant
+            </h3>
+
+            <p>
+                The fields around a microstrip patch are not
+                completely confined to the dielectric substrate.
+                Part of the electromagnetic field exists in air
+                while part exists inside the substrate.
+            </p>
+
+            <p>
+                The patch therefore behaves as if it were embedded
+                in a material with an effective dielectric constant
+                between that of air and the substrate.
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Effective Relative Permittivity
+                </p>
+
+                <p class="equation">
+                    ε_eff =
+                    (εᵣ + 1)/2 +
+                    (εᵣ - 1)/2 ×
+                    [1 + 12h/W]⁻¹ᐟ²
+                </p>
+
+            </div>
+
+            <h3 class="case-subheading">
+                Effective Patch Length
+            </h3>
+
+            <p>
+                Using the effective dielectric constant, the
+                approximate electrical length corresponding to
+                the fundamental patch mode can be calculated.
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Effective Length
+                </p>
+
+                <p class="equation">
+                    L_eff =
+                    c /
+                    (2 f₀ √ε_eff)
+                </p>
+
+            </div>
+
+            <h3 class="case-subheading">
+                Fringing Field Correction
+            </h3>
+
+            <p>
+                The electric fields at the ends of the patch
+                extend beyond the physical copper boundary.
+                This effect makes the antenna electrically longer
+                than its physical dimensions.
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Fringing Extension
+                </p>
+
+                <p class="equation">
+                    ΔL / h =
+                    0.412
+                    ((ε_eff + 0.3)(W/h + 0.264))
+                    /
+                    ((ε_eff - 0.258)(W/h + 0.8))
+                </p>
+
+            </div>
+
+
+            <p>
+                The physical patch length is therefore:
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation">
+                    L = L_eff - 2ΔL
+                </p>
+
+            </div>
+
+
+            <h3 class="case-subheading">
+                Initial Geometry
+            </h3>
+
+            <p>
+                The analytical calculations produced the initial
+                dimensions used to build the HFSS model.
+            </p>
+
+
+            <div class="design-values">
+
+                <div>
+                    <span>Patch Width</span>
+                    <strong>31.26 mm</strong>
+                </div>
+
+                <div>
+                    <span>Patch Length</span>
+                    <strong>25.56 mm</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HFSS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                04 — SIMULATION
+            </p>
+
+            <h2>
+                Building the HFSS Model
+            </h2>
+
+
+            <p>
+                The analytical equations provide an initial
+                design, but they rely on approximations.
+                Electromagnetic simulation was therefore used
+                to evaluate the complete antenna geometry.
+            </p>
+
+
+            <p>
+                The patch, dielectric substrate, ground plane,
+                feed structure, and surrounding air volume were
+                modeled in Ansys HFSS.
+            </p>
+
+
+            <div class="placeholder large-placeholder">
+
+                <p>
+                    HFSS antenna model
+                    will go here.
+                </p>
+
+            </div>
+
+
+            <h3 class="case-subheading">
+                Simulation Outputs
+            </h3>
+
+
+            <ul class="engineering-list">
+
+                <li>
+                    Return loss (S11)
+                </li>
+
+                <li>
+                    Voltage standing-wave ratio (VSWR)
+                </li>
+
+                <li>
+                    Input impedance
+                </li>
+
+                <li>
+                    Smith chart
+                </li>
+
+                <li>
+                    3D radiation pattern
+                </li>
+
+                <li>
+                    Gain and directivity
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- IMPEDANCE MATCHING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                05 — IMPEDANCE MATCHING
+            </p>
+
+            <h2>
+                Matching the Antenna to 50 Ω
+            </h2>
+
+
+            <p>
+                Maximum power transfer from the RF source to
+                the antenna occurs when the antenna input
+                impedance is matched to the characteristic
+                impedance of the feed system.
+            </p>
+
+
+            <p>
+                Because the feed transmission line was designed
+                for 50 Ω, the antenna feed geometry was adjusted
+                to bring the antenna input impedance toward
+                50 Ω at the target frequency.
+            </p>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Reflection Coefficient
+                </p>
+
+                <p class="equation">
+                    Γ =
+                    (ZL - Z0) /
+                    (ZL + Z0)
+                </p>
+
+            </div>
+
+
+            <div class="equation-box">
+
+                <p class="equation-title">
+                    Return Loss / S11
+                </p>
+
+                <p class="equation">
+                    S11(dB) =
+                    20 log₁₀ |Γ|
+                </p>
+
+            </div>
+
+
+            <p>
+                A lower S11 magnitude in decibels indicates
+                that less incident RF power is being reflected
+                back toward the source.
+            </p>
+
+
+            <div class="placeholder">
+
+                <p>
+                    S11 plot will go here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Radiation Pattern -->
+        <section class="case-section">
+
+            <p class="section-label">
+                06 — RADIATION
+            </p>
+
+            <h2>
+                Radiation Pattern
+            </h2>
+
+
+            <p>
+                After matching the antenna, the far-field
+                radiation pattern was evaluated to determine
+                how electromagnetic power was distributed
+                spatially.
+            </p>
+
+
+            <p>
+                A microstrip patch primarily radiates
+                perpendicular to the patch surface, producing
+                a broadside radiation pattern.
+            </p>
+
+
+            <div class="placeholder large-placeholder">
+
+                <p>
+                    HFSS 3D radiation pattern
+                    will go here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PCB -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                07 — PCB IMPLEMENTATION
+            </p>
+
+            <h2>
+                Translating the RF Design to KiCad
+            </h2>
+
+
+            <p>
+                Once the antenna geometry was established,
+                the dimensions were transferred into KiCad
+                to create the PCB layout.
+            </p>
+
+
+            <p>
+                At RF frequencies, PCB geometry directly
+                affects circuit behavior. The patch,
+                transmission line, substrate, and ground
+                geometry therefore need to remain consistent
+                with the simulated structure.
+            </p>
+
+
+            <div class="placeholder large-placeholder">
+
+                <p>
+                    KiCad PCB layout
+                    will go here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RESULTS -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                08 — RESULTS
+            </p>
+
+            <h2>
+                Simulation Results
+            </h2>
+
+
+            <p>
+                The final antenna performance was evaluated
+                using its resonant frequency, S11, VSWR,
+                input impedance, and radiation pattern.
+            </p>
+
+
+            <p class="results-note">
+                Final simulation values and plots will be
+                added here after the HFSS results are
+                organized.
+            </p>
+
+
+            <div class="result-grid">
+
+
+                <div class="result-card">
+
+                    <p class="result-number">
+                        2.4 GHz
+                    </p>
+
+                    <p>
+                        Target Frequency
+                    </p>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <p class="result-number">
+                        50 Ω
+                    </p>
+
+                    <p>
+                        Feed System
+                    </p>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <p class="result-number">
+                        HFSS
+                    </p>
+
+                    <p>
+                        EM Simulation
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LEARNING -->
+
+        <section class="case-section">
+
+            <p class="section-label">
+                08 — TAKEAWAYS
+            </p>
+
+            <h2>
+                What I Learned
+            </h2>
+
+
+            <p>
+
+                This project provided practical
+                experience connecting analytical antenna
+                theory with electromagnetic simulation
+                and PCB implementation.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>
