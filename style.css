@@ -1018,6 +1018,40 @@ section > h2 {
     line-height: 1.7;
 }
 
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.site-footer {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 40px;
+
+    border-top: 1px solid #eee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
 
 /* MOBILE */
 
@@ -1134,5 +1168,32 @@ section > h2 {
         font-size: 16px;
 
         border-bottom: 1px solid #eee;
+    }
+
+    .site-footer {
+        padding: 30px 25px;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
     }
 }
