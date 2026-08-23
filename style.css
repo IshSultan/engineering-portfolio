@@ -377,48 +377,6 @@ section > h2 {
     transform: translateX(5px);
 }
 
-.project-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
-
-    gap: 25px;
-}
-
-.project-card {
-    padding: 30px;
-
-    border: 1px solid #ddd;
-
-    transition: 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.project-card h3 {
-    font-size: 23px;
-
-    margin-bottom: 15px;
-}
-
-.project-card p {
-    color: #666;
-
-    margin-bottom: 20px;
-}
-
-.project-card a {
-    text-decoration: none;
-
-    color: #111;
-
-    font-weight: bold;
-}
 
 
 /* CONTACT */
@@ -740,31 +698,9 @@ section > h2 {
 ------------------------- */
 
 .project-figure {
-    margin: 45px 0;
-}
-
-.project-figure img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    border: 1px solid #e2e2e2;
-}
-
-.project-figure figcaption {
-    margin-top: 12px;
-
-    font-size: 14px;
-    line-height: 1.6;
-
-    color: #777;
-}
-
-.project-figure {
-    margin: 45px 0;
-
     max-width: 900px;
+
+    margin: 45px auto;
 
     overflow: hidden;
 }
@@ -778,6 +714,15 @@ section > h2 {
     border: 1px solid #e2e2e2;
 
     transition: transform 0.3s ease;
+}
+
+.project-figure figcaption {
+    margin-top: 12px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #777;
 }
 
 .project-figure img:hover {
